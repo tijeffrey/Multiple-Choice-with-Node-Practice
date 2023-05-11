@@ -19,15 +19,13 @@ let finalYes = document.querySelector('#finalYes');
 var myButtons = document.querySelectorAll('.option');
 let finalAnswer = document.querySelector('.final-Answer');
 let greenScreen = document.querySelector('.correctScreen');
-
+let testName = ''
 const btns = document.querySelectorAll('.btn');
-
-let testTopic = '';
 
 document.querySelector('button').addEventListener('click', apiRequest)
 
 async function apiRequest(){
-  testTopic = document.getElementById('inputting').value;
+  const testName = document.getElementById('inputting').value;
   try{
     const response = await fetch(`https://fluffy-ray-housecoat.cyclic.app/api/${testName}`)
     const data = await response.json()
@@ -37,8 +35,6 @@ async function apiRequest(){
     console.log(error)
 }
 };
-
-console.log(testName);
 
 // btns.forEach(function (btn){
 //   btn.addEventListener('click', function (e){
@@ -134,7 +130,7 @@ function checkAnswer(){
   var elements = document.querySelector('.activated');
   choosersAnswer = elements.textContent;
 
-  if (Number !== 3 && choosersAnswer === Object.values(test_data[`${testTopic}`])[count][1][0]){
+  if (Number !== 3 && choosersAnswer === Object.values(test_data[`${testName}`])[count][1][0]){
     finalAnswer.style.display = 'none'
     greenScreen.style.display = 'block'
     Number++
@@ -147,7 +143,7 @@ function checkAnswer(){
     document.querySelector('.youWin').style.display = 'block';
   }
 
-  if (choosersAnswer !== Object.values(test_data[`${testTopic}`])[count][1][0]){
+  if (choosersAnswer !== Object.values(test_data[`${testName}`])[count][1][0]){
     gameOver.style.display = 'block';
   }
 };

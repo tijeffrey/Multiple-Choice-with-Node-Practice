@@ -4,16 +4,12 @@ const app = express();
 const PORT = 8000
 const cors = require('cors')
 
+app.use('*/css',express.static('public/css'), cors());
+app.use('*/js', express.static('public/js'), cors());
 
 app.get('/', (request, response) =>{
     response.sendFile(__dirname + '/Multiple Choice with Highlighted Pieces.html')
 })
-
-app.use('*/css',express.static('public/css'), cors());
-app.use('*/js', express.static('public/js'), cors());
-
-
-
 
 test_data = {
   'shakespeare': {"To be or not to be.": 
