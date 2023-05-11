@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href = "public/css/Stylesheet.css">
+</head>
+
+
+<body>
+    <h1>Available Tests</h1>
+    <input id = 'inputting' type="text">
+    <button class = 'testSelection'>Select a Test</button>
+
+    <h1 id = "mainQuestion"></h1>
+    <section class="options">
+
+    <div id = "a" class="option a">
+        <span></span>
+    </div>
+
+    <div id = "b" class="option b">
+        <span></span>
+    </div>
+
+    <div id = "c" class="option c">
+        <span></span>
+    </div>
+
+    <div id = "d" class="option d">
+        <span></span>
+    </div>
+
+    <div class="final-Answer">
+    <div class = "finalAnswerContent">
+    <h2>Is this your final answer?</h2>
+        <button id = "finalYes">Yes</button>
+        <button id = "finalNo">No</button>
+    </div>
+    </div>
+
+    <div class="correctScreen">
+        <div class = "correctScreenContent">
+        <h2>Correct! Move onto the next question</h2>
+            <button id = "nextQuestion">Next Question</button>
+        </div>
+    </div>
+
+    <div class="gameOver">
+        <div class = "gameOverContent">
+        <h2>Game Over</h2>
+            <button id = "tryAgain">Click Here to Try Again</button>
+        </div>
+    </div>
+    
+    <div class = "scoreWord">Score: <div class = "score"></div></div>
+</section>
+
+<div id="overlay"></div>
+
+<div class = "youWin">Congratulations! You Won!</div>
+<script src = "public/js/main.js"></script>
+</body>
+
+
+</html>
