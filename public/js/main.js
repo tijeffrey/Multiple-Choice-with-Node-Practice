@@ -34,9 +34,9 @@ async function apiRequest(){
 }catch(error){
     console.log(error)
 }
-console.log(testName)
+console.log(testName);
 };
-console.log(testName)
+console.log(testName);
 
 // btns.forEach(function (btn){
 //   btn.addEventListener('click', function (e){
