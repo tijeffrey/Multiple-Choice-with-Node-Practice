@@ -35,7 +35,6 @@ async function apiRequest(){
     console.log(error)
 }
 
-console.log(test_data)
 };
 
 // btns.forEach(function (btn){
@@ -149,6 +148,9 @@ function checkAnswer(){
     gameOver.style.display = 'block';
   }
 };
+
+console.log(test_data)
+
 
 
 
