@@ -22,7 +22,7 @@ let greenScreen = document.querySelector('.correctScreen');
 let testName = ''
 const btns = document.querySelectorAll('.btn');
 
-document.getElementsByClassName('testSelection').addEventListener('click', apiRequest)
+document.getElementById("testSelection").addEventListener('click', apiRequest)
 
 async function apiRequest(){
   const testName = document.getElementById('inputting').value;
