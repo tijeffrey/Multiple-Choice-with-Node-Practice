@@ -29,7 +29,7 @@ document.querySelector('button').addEventListener('click', apiRequest)
 async function apiRequest(){
   testTopic = document.getElementById('inputting').value;
   try{
-    const response = await fetch(`http://localhost:8000/api/${testName}`)
+    const response = await fetch(`https://fluffy-ray-housecoat.cyclic.app/api/${testName}`)
     const data = await response.json()
     start()
     console.log(data)
