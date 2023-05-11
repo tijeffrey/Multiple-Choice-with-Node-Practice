@@ -25,7 +25,7 @@ const btns = document.querySelectorAll('.btn');
 document.getElementById("testSelection").addEventListener('click', apiRequest)
 
 async function apiRequest(){
-  const testName = document.getElementById('inputting').value;
+  testName = document.getElementById('inputting').value;
   try{
     const response = await fetch(`https://fluffy-ray-housecoat.cyclic.app/api/${testName}`)
     const data = await response.json()
