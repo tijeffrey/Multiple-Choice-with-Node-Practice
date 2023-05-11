@@ -2,13 +2,17 @@ const path = require('path');
 const express = require('express');
 const app = express();
 const PORT = 8000
+const cors = require('cors')
+
 
 app.get('/', (request, response) =>{
     response.sendFile(__dirname + '/Multiple Choice with Highlighted Pieces.html')
 })
 
-app.use('*/css',express.static('public/css'));
-app.use('*/js',express.static('public/js'));
+app.use('*/css',express.static('public/css'), cors());
+app.use('*/js', express.static('public/js'), cors());
+
+
 
 
 test_data = {
