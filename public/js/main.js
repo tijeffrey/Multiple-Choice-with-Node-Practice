@@ -50,23 +50,23 @@ async function apiRequest(){
 //   })
 // });
 
-// test_data = {
-//   'shakespeare': {"To be or not to be.": 
-//   [["Hamlet", "King Lear", "Romeo", "Tybalt"], ["Hamlet"]],
-//   "That time of year thou mayst in me _____":
-//   [["behold", "see", "regret", "observe"], ["behold"]],
-//   "That lord whose hand must take my plight shall carry / Half my love with him, half my care and duty.":
-//   [["Othello", "Cordelia", "Cleopatra", "Edmund"], ["Cordelia"]]
-//   },
+test_data = {
+  'shakespeare': {"To be or not to be.": 
+  [["Hamlet", "King Lear", "Romeo", "Tybalt"], ["Hamlet"]],
+  "That time of year thou mayst in me _____":
+  [["behold", "see", "regret", "observe"], ["behold"]],
+  "That lord whose hand must take my plight shall carry / Half my love with him, half my care and duty.":
+  [["Othello", "Cordelia", "Cleopatra", "Edmund"], ["Cordelia"]]
+  },
   
-//   'vocabulary': {"Opposite of Clear": 
-//   [["murky", "lucid", "laborious", "sivilant"], ["murky"]],
-//   "Pleasure - Pain, Joy - _________":
-//   [["sorrow", "elation", "ebullience", "disgust"], ["sorrow"]],
-//   "Digress":
-//   [["short answer", "to go off topic", "long-winded", "pacify"], ["to go off topic"]]
-//   }
-//   };
+  'vocabulary': {"Opposite of Clear": 
+  [["murky", "lucid", "laborious", "sivilant"], ["murky"]],
+  "Pleasure - Pain, Joy - _________":
+  [["sorrow", "elation", "ebullience", "disgust"], ["sorrow"]],
+  "Digress":
+  [["short answer", "to go off topic", "long-winded", "pacify"], ["to go off topic"]]
+  }
+  };
 
 function questionsIntoBoxes(){
     mainQuestion.innerText = Object.keys(test_data[`${testName}`])[count]
