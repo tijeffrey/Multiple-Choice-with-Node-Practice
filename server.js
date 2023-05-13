@@ -36,9 +36,11 @@ app.get('/api/:testName', (request, response) => {
     const testNames = request.params.testName.toLowerCase()
     if(test_data[testNames]){
         response.json(test_data[testNames])
+        console.log(test_data[testNames])
     }
     else{
         response.json(test_data['noName'])
+        console.log(test_data['noName'])
     }
 });
 
