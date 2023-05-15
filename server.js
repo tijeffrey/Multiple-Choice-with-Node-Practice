@@ -37,12 +37,21 @@ app.get('/api/:testName', (request, response) => {
     if(test_data[testNames]){
         response.json(test_data[testNames])
         console.log(test_data[testNames])
+        questionsIntoBoxes()
     }
     else{
         response.json(test_data['noName'])
         console.log(test_data['noName'])
     }
 });
+
+function questionsIntoBoxes(){
+    mainQuestion.innerText = Object.keys(test_data[`${testName}`])[count]
+    optionA.innerText = Object.values(test_data[`${testName}`])[count][0][0]
+    optionB.innerText = Object.values(test_data[`${testName}`])[count][0][1]
+    optionC.innerText = Object.values(test_data[`${testName}`])[count][0][2]
+    optionD.innerText = Object.values(test_data[`${testName}`])[count][0][3]
+};
 
 app.listen(process.env.port || PORT, ()=>{
     console.log(`The Server is running on ${PORT}! You better go catch it!`)
